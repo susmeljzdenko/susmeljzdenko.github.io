@@ -1,0 +1,183 @@
+*{
+	margin:0;
+	padding:0;
+	user-select: none;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+a:active, a:hover, a:visited, a:link{
+	text-decoration: none;
+}
+
+body{
+	background-image: linear-gradient(#1f2021, #0c0d0d);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	position: absolute;
+	width: 100%;
+	height: 100%;	
+}
+
+li{
+	transition-duration:0.2s;
+}
+
+li:hover {
+	font-size:1.1em;
+}
+
+.background{
+	margin:-2vw auto;
+	width:80%;
+	height:45vw;
+	border-radius:1em;
+}
+
+.background img{
+	min-width:50%;
+	width:100%;
+}
+
+#ime{
+	z-index: 2;
+	transition:opacity 0.2s;
+	position: relative;
+	margin-top:-35%;
+	width:100%;
+	text-align:center;
+	font-family:Candara;
+	color:rgb(255, 255, 255);
+	font-size:5vw;
+	text-shadow:4px 4px 5px black;
+	transition:transform 0.3s;
+}
+
+#ime:hover{
+	transform: scale(1.05);
+	cursor:pointer;
+	text-shadow:4px 4px 10px black;
+}
+
+
+#description{
+	width:80%;
+	margin:6vw auto;
+	font-family: 'Patrick Hand';
+	font-size:2vw;
+	text-align: center;
+}
+
+.grid-container {
+	margin:8vw auto;
+	margin-bottom:8vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+	width:80%;
+	height:30vw;
+}
+
+.grid-item {
+	margin:1vw;
+}
+
+.grid-item img{
+	opacity:0.7;
+	filter: grayscale(90%);
+	max-width:100%;
+	border-radius:0.5em;
+	transition-duration:0.2s;
+}
+
+.grid-item img:hover{
+	opacity:1.0;
+	transform:scale(1.05);
+	filter: grayscale(0%);
+	cursor:pointer;
+}
+
+#image{
+	transition:opacity 0.2s, background-image 0.1s;
+	margin:-20vw auto;
+	width:57vw;
+	height:32vw;
+	background-repeat: no-repeat;
+	background-size: 100%;''
+}
+
+#image #next, #back{
+	cursor:pointer;
+	width:28vw;
+	height:32vw;
+	display: inline-block;
+	position: relative;
+}
+
+#image #next{	
+	left:50%;
+}
+
+#image #back{
+	left:-49%;
+}
+
+#vizitka{
+	bottom:0;
+	width:100%;
+	background-color:black;
+	border-top:1px dashed #473400;
+	text-align:center;
+	font-family: 'Vollkorn SC';
+	font-size:1.2em;
+	user-select:text;
+}
+
+#vizitka .bright{
+	color:#4d4d4d;
+	font-size:1.4em;
+	margin-top:1em;
+}
+
+#vizitka .bright:hover{
+	color:#797979;
+	cursor:pointer
+}
+
+#vizitka img{
+	max-width:2em;
+	margin-right:1vw;
+	transition-duration:0.2s;
+}
+
+#vizitka img:hover{
+	transform:scale(1.2);
+	cursor:pointer;
+}
+
+abbr{
+	cursor:pointer !important;
+}
+
+@font-face{
+	font-family: 'Patrick Hand';
+	src:url('fonts/PatrickHand-Regular.ttf');
+}
+
+@font-face{
+	font-family: 'Vollkorn SC';
+	src:url('fonts/VollkornSC-Regular.ttf');
+}
+
+@media only screen and (max-width: 900px) {
+	#description{
+		font-size:3vw;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#description{
+		font-size:4vw;
+	}
+}

@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+	<head>
+			<title>Portfolio - Zdenko Šušmelj</title>
+			<meta charset="utf-8">
+		  	<meta name="viewport" content="width=device-width, initial-scale=1">
+			  <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>  
+			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  	<link rel="stylesheet" type="text/css" href="style.css"/>
+		</head>
+	
+	<body>
+		<nav class="navbar navbar-inverse">
+		  	<div class="container-fluid">
+				<div class="navbar-header">
+			  		<a class="navbar-brand" href="#">Portfolio</a>
+				</div>
+				<ul class="nav navbar-nav">
+			  		<li class="active"><a href="#domov">Domov</a></li>
+			  		<li><a href="#description">O meni</a></li>
+			  		<li><a href="#galerija">Galerija</a></li>
+			  		<li><a href="#vizitka">Vizitka</a></li>
+				</ul>
+		  	</div>
+		</nav>
+		
+		<div id="domov" class="background">
+				<img draggable="false" src="images/frontview.png"/>	
+			<div id="ime">Zdenko Šušmelj</div>
+			
+			<div id="image">
+				<div onclick="nextImg()" id="next"></div>
+				<div onclick="backImg()" id="back"></div>
+			</div>
+		</div>
+
+		<div id="description">
+			Zdenko Šušmelj, rojen l. 2001 v Šempetru pri Gorici, se trenutno poučujem na Šolskem Centru Nova Gorica 
+			v programu Tehnik Računalništva. V prostem času se ukvarjam z fotografijo in kolesarjenjem.
+			Moja največja strast je avtomobilizem.
+
+		</div>
+
+		<div id="galerija" class="grid-container">
+			<div class="grid-item" onclick="selectImg(1)"><img draggable="false" src="images/k1attack.jpg"/></div>
+		  	<div class="grid-item" onclick="selectImg(2)"><img draggable="false" src="images/fico.jpg"/></div>
+		  	<div class="grid-item" onclick="selectImg(3)"><img draggable="false" src="images/miata.jpg"/></div>
+		  	<div class="grid-item" onclick="selectImg(4)"><img draggable="false" src="images/mitsubishi.jpg"/></div>
+		 	<div class="grid-item" onclick="selectImg(5)"><img draggable="false" src="images/peugeot.jpg"/></div>
+		  	<div class="grid-item" onclick="selectImg(6)"><img draggable="false" src="images/subaru.jpg"/></div>
+		</div>
+
+		<div id="vizitka">
+			<div class="bright">Socialni mediji</div>
+
+				<a href="https://www.instagram.com/susmeljzdenko/" target="_blank">
+					<abbr title="susmeljzdenko"><img src="images/instagram.png"/></abbr>
+				</a>
+
+				<abbr title="denk-memez"><img src="images/snapchat.png"/></abbr>
+
+				<abbr title="Babushka#7396"><img src="images/discord.png"/></abbr>
+
+				<a href="https://www.facebook.com/whyDoUreadThis" target="_blank">
+					<abbr title="Zdenko Šušmelj"><img src="images/facebook.png"/></abbr>
+				</a>
+
+			<a href="mailto:susmelj.zdenko@gmail.com">
+				<div class="bright">Elektronski naslov</div>
+			</a>
+				susmelj.zdenko@gmail.com
+			<a href="https://www.google.com/search?sxsrf=ACYBGNSsN2dMuW-0qIwm17LN1p9HB6FpRA%3A1569917131269&ei=ywiTXcGUEMnUsAe9kYDwCg&q=031+836+493&oq=031+836+493&gs_l=psy-ab.3...1606.3215..3507...0.4..0.190.1175.7j4......0....1..gws-wiz.......0i71j35i39j0j0i131j0i22i30.d-MBPD6_LAs&ved=0ahUKEwiBpr6HzfrkAhVJKuwKHb0IAK4Q4dUDCAs&uact=5" target="_blank">
+				<div class="bright">Telefonska številka</div>
+			</a>
+				gsm: +386 31 836 493
+			<a href="https://www.google.com/maps/place/Ulica+Gradnikove+brigade+33,+5000+Nova+Gorica/@45.9614755,13.6450432,17z/data=!3m1!4b1!4m5!3m4!1s0x477b0102104a585f:0x2523a8da83ee567!8m2!3d45.9614755!4d13.6472319?hl=sl-SI" target="_blank">
+				<div class="bright">Naslov</div>
+			</a>
+				Gradnikove Brigade 33, 5000 Nova Gorica
+		</div>
+
+			<script>
+				var i = 1;
+				var x = document.getElementById("image");
+				var ime = document.getElementById("ime");
+				var next = document.getElementById("next");
+				var back = document.getElementById("back");
+		
+				var url = null;
+
+					function selectImg(i){
+						switch(i){
+							case 1: url='url("images/k1attack.jpg")'; break;
+							case 2: url='url("images/fico.jpg")'; break;
+							case 3: url='url("images/miata.jpg")'; break;
+							case 4: url='url("images/mitsubishi.jpg")'; break;
+							case 5: url='url("images/peugeot.jpg")'; break;
+							case 6: url='url("images/subaru.jpg")'; break;
+							default: break;  
+						}
+						x.style.backgroundImage=url;
+						showImg();
+						ime.scrollIntoView(true);
+						window.scrollBy(0,-1000);
+					}
+
+					function showImg(){
+						x.style.opacity = "1";
+						ime.style.opacity = "0";
+						next.style.cursor = 'url("images/cursor-right.png") 50 50, pointer';
+						back.style.cursor = 'url("images/cursor-left.png") 50 50, pointer';
+						next.style.zIndex = '3';
+						back.style.zIndex = '3';
+					}
+
+					function hideImg(){
+						x.style.opacity = "0";
+						ime.style.opacity = "1";
+						next.style.cursor = 'pointer';
+						back.style.cursor = 'pointer';
+						next.style.zIndex = '-1';
+						back.style.zIndex = '-1';
+					}
+
+					function nextImg(){
+						if(x.style.opacity === "1"){
+							if(i >= 6)
+								i = 1;
+							else i++;
+								selectImg(i);
+						}
+					}
+
+					function backImg(){
+					if(x.style.opacity === "1"){
+						if(i <= 1)
+							i = 6; 
+						else i--; 
+							selectImg(i);
+						}
+					}
+
+					window.onkeydown = function (event) {
+					if(x.style.opacity === "1"){
+						switch(event.keyCode){
+							case 27: hideImg(); break;
+							case 39: if(i >= 6)i = 1; else i++; selectImg(i); break;
+							case 37: if(i <= 1)i = 6; else i--; selectImg(i); break;
+							default: break;
+						}
+					}
+				}		
+			</script>
+	</body>
+</html>
