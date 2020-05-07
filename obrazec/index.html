@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="SI">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/podatki.css" />
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+	<link rel="script" href="js/javascript.js" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8" />
+	<title>Prijava na tečaj CPP</title>
+</head>
+
+<body>
+	<div class="banner">
+		POB
+	</div>
+
+	<div class="container-main">
+
+		<div class="copyright">
+			POB d.o.o. &#169;
+
+		</div>
+
+		<h1>Prijava na tečaj CPP</h1>
+
+		<br /><br />
+		<div class="wrapper">
+			<div class="container-form">
+				<form>
+					<div class="number">01.
+						<div class="description">Izbira kategorije</div>
+					</div>
+					<div class="query">
+						<select required name="kategorija">
+							<option value="a">A kategorija</option>
+							<option value="b" selected="selected">B kategorija</option>
+							<option value="c">C kategorija</option>
+							<option value="d">D kategorija</option>
+							<option value="e">E kategorija</option>
+						</select>
+					</div>
+			</div>
+
+			<div class="container-form">
+				<div class="number">02.
+					<div class="description">Teoretični del</div>
+				</div>
+				<div class="query">
+					<h4>Ste že obiskovali tečaje?</h4>
+
+					<div class="radio-button">
+						<input type="radio" name="confirm" id="radioYes" value="yes" required><label for="radioYes">
+							DA</label>
+						<input type="radio" name="confirm" id="radioNo" value="no" required><label for="radioNo">
+							NE</label>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="container-form">
+				<div class="number">03.
+					<div class="description">Izberite termin</div>
+				</div>
+
+				<div class="query">
+					<h4>Določite si želen termin.</h4>
+					<input type="date" id="datum" onchange="dateSelected()" required />
+
+				</div>
+			</div>
+			<div class="container-form">
+				<div class="number">04.
+					<div class="description">Vnesite podatke</div>
+				</div>
+
+				<div class="grid-container" onclick="resetInput();">
+
+					<div class="grid-item"><input type="text" id="ime-priimek" placeholder="IME IN PRIIMEK"
+							minlength="5" required /></div>
+					<div class="grid-item"><input type="text" id="emso" placeholder="EMŠO" maxlength="13" required />
+					</div>
+					<div class="grid-item"><input type="text" id="naslov" placeholder="NASLOV" minlength="5"
+							required /></div>
+					<div class="grid-item"><input type="text" id="postna-st" placeholder="POŠTNA ŠTEVILKA"
+							maxlength="4" required /></div>
+					<div class="grid-item">
+						<select id="klicna-koda" onclick="phoneSelected()">
+							<option value="386" selected="selected">+386<img src="img/cro_flag.png" height="32"></option>
+							<option value="39">+39</option>
+							<option value="385">+385</option>
+							<option value="43">+43</option>
+							<option value="36">+36</option>
+						</select>
+						<input type="text" id="tel-st" placeholder="TELEFONSKA ŠTEVILKA" maxlength="9" required />
+					</div>
+					<div class="grid-item"><input type="text" id="email" placeholder="E-MAIL NASLOV" required /></div>
+
+				</div>
+			</div>
+
+			<div class="container-form">
+				<div class="number">05.
+					<div class="description">Oddaja obrazca</div>
+				</div>
+
+				<div class="query">
+					<div id="alert" style="color:white;">
+						<h4>Preverite vnešene podatke</h4>
+					</div>
+
+					<form action="#" method="post" onsubmit="return checkFilled();">
+
+						<input type="submit" name="upvote" value="Oddaj obrazec!" />
+
+					</form>
+
+				</div>
+			</div>
+			</form>
+		</div>
+		<script src="js/javascript.js"></script>
+	</div>
+</body>
+
+</html>

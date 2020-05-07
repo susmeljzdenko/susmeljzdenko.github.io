@@ -1,0 +1,46 @@
+.grid-container {
+	text-align:center;
+	position:relative;
+	margin-left:20vw;
+	width:75%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item{
+	margin:0 1vw 2vw 0;
+}
+
+.grid-container .grid-item input[type="text"]{
+	color:black !important;
+	height:2.4em;
+	width: 100%;
+	font-family: sans-serif, Arial;
+    font-size: 1.2em;
+    background-color:#ddd;
+    text-indent:0.5em;
+    transition-duration:0.2s;
+}
+
+.grid-container .grid-item  input[type="text"]::placeholder{
+	transition-duration:0.2s;
+}
+
+.grid-container .grid-item  input[type="text"]:hover{
+	background-color:#d6d6d6;
+}
+
+.grid-container .grid-item  input[type="text"]:focus::placeholder{
+	opacity:0;
+	transition-duration:0.2s;
+}
+
+.grid-container .grid-item  select[id="klicna-koda"]{
+	height:2.6em;
+	z-index:1;
+    background-color: #ddd;
+	width:4em;
+    font-family: sans-serif, Arial;
+    font-size: 1.2em;
+	transition-duration:0.5s;
+}
