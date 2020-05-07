@@ -1,0 +1,163 @@
+*{
+  user-select:none;
+}
+
+html, body{
+  overflow:hidden;
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100%;
+}
+
+.ozadje{
+  position:fixed;
+  z-index:-5;
+  height:100%;
+  width:100%;
+  background-image:url('../img/ozadje.jpeg');
+  background-size:cover;
+  filter:brightness(250%);
+}
+
+li:first-of-type{
+  font-family:Futura;
+  font-style:italic;
+  font-size:1.7em;
+  line-height:1em;
+  letter-spacing: -2px;
+}
+
+.nav-link{
+  color:rgb(211, 211, 211) !important;
+  transition: color 0.2s !important;
+}
+.nav-link:hover{
+  cursor:pointer;
+  color:rgb(139, 139, 139) !important;
+}
+.nav-item{
+  margin-right:1vw;
+}
+
+.nav-item a:hover{
+  border-bottom:1px solid rgb(126, 126, 126);
+  transition: border 0.5s;
+}
+
+@font-face{
+  font-family:Futura;
+  src: url('../fonts/Futura.otf');
+}
+
+.wrapper{
+  position:absolute;
+  height:90%;
+  width:40%;
+  left:30%;
+}
+
+.wrapper .krivulja{
+  position: relative;
+  margin:10vw auto;
+  fill:white;
+  z-index:2;
+  width:40%;
+}
+
+.wrapper .krivulja .nike-text{
+  position: absolute;
+  margin:-1.7vw 0 0 3.7vw;
+  font:italic 3.8vw Futura;
+  color:white;
+  letter-spacing: -4px;
+  transform: skew(-10deg, 0deg);
+  text-shadow:1px 1px 1px black;
+}
+
+.wrapper #shirt{
+  position: relative;
+  width:93.5%;
+  margin:-24vw auto;
+}
+.wrapper #hoodie{
+  position: relative;
+  width:93.5%;
+  margin:-42vw auto;
+  visibility:hidden;
+}
+
+.bezier-palette{
+  position: relative;
+  text-align:center;
+  z-index:1;
+  margin:18vw auto;
+  width:15vw;
+  color:white;
+}
+
+.jscolor{
+  font-family:'Trebuchet MS';
+  display:block;
+  margin:1vw auto;  
+  width:8vw !important;
+  height:3em !important;
+  text-align:center;
+  border:none !important;
+  border-radius:.5vw;
+  border:1px solid rgb(128, 128, 128) !important;
+  box-shadow: 1px 2px 4px rgb(0, 0, 0);
+}
+
+.jscolor:focus{
+  outline:none !important;
+}
+
+.jscolor:hover{
+  cursor:pointer;
+}
+
+.slika{
+  position: absolute;
+  margin-left:43.5vw;
+  margin-top:19vw;
+  z-index:1;
+}
+
+@media only screen and (max-width: 1400px){
+  .bezier-palette{
+    position:relative;
+    margin-top:15vw;
+    float:right;
+    width:30vw;
+  }
+  .wrapper{
+    margin-left:-15vw;
+    width:50%;
+  }
+  #shirt svg, #hoodie svg{
+    width:30em;
+  }
+  .krivulja svg{
+    width:18em;
+  }
+  .wrapper .krivulja .nike-text{
+    margin:-0.45em 0 0 1.05em !important;
+    font-size:4.5em !important;
+  }
+  .wrapper .krivulja{
+    position: absolute;
+    margin:11.5em 0 0 7em;
+    height:12em;
+    width:18em;
+  }
+  .jscolor{
+    width:15vw !important;
+  }
+  .wrapper #shirt{
+    margin:5vw auto;
+  }
+  .wrapper #hoodie{
+    margin:-60vw auto;
+  }
+  }

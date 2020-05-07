@@ -1,0 +1,67 @@
+*{
+  user-select:none;
+}
+
+html, body{
+  overflow:hidden;
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100%;
+}
+
+.ozadje{
+  position:fixed;
+  z-index:-5;
+  height:100%;
+  width:100%;
+  background-image:url('../img/ozadje.jpeg');
+  background-size:cover;
+  filter:brightness(250%);
+}
+
+li:first-of-type{
+  font-family:Futura;
+  font-style:italic;
+  font-size:1.7em;
+  line-height:1em;
+  letter-spacing: -2px;
+}
+.nav-link{
+  color:rgb(211, 211, 211) !important;
+  transition: color 0.2s !important;
+}
+.nav-link:hover{
+  cursor:pointer;
+  color:rgb(139, 139, 139) !important;
+}
+
+.nav-item{
+  margin-right:1vw;
+}
+
+.nav-item a:hover{
+  border-bottom:1px solid rgb(126, 126, 126);
+  transition: border 0.5s;
+}
+
+@font-face{
+  font-family:Futura;
+  src: url('../fonts/Futura.otf');
+}
+
+.wrapper{
+  width:25em;
+  height:100%;
+  margin:-4vw auto;
+}
+canvas{
+  height:11em;
+  margin-left:4em;
+}
+
+@media only screen and (min-width: 1400px){
+  .wrapper{
+    margin:100px auto;
+  }
+  }

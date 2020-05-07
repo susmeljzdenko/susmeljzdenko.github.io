@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 300;
+    color: white;
+}
+#wrap{
+    background-color: #191414;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+#stageName{
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#drawing{
+    width: 100%;
+    height: 80%;
+}
+#drawCanvas{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-bottom: 3px solid #FFFFFF;
+    border-top: 3px solid #FFFFFF ;
+}
+#controls{
+    box-sizing: border-box;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.threeFlex{
+    display: flex;
+    flex-direction: row;
+    width:33%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    background-color: #1DB954;
+    border-radius: 50px;
+    border:none;
+    width: 150px;
+    height: 75px;
+    font-size: 28px;
+    margin: 4px;
+    opacity: 1;
+    transition: ease-in .2s, width ease-in .1s, height ease-in .1s, font-size ease-in .1s;
+    outline: none;
+    font-family: 'Montserrat',sans-serif;
+    color:#FFFFFF;
+}
+button:hover{
+    width:170px;
+    height: 95px;
+    font-size: 36px;
+}
+#backButton{
+    width: 35px;
+    height: 35px;
+    font-size:25px;
+    border-radius: 15px;
+}
+#backButton:hover{
+    width:40px;
+    height: 40px;
+    font-size: 30px;
+
+}
+#title{
+    
+    color:white;
+    font-size: 100px;
+}
+#numPoints{
+    font-size: 32px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Bezier game</title>
+        <link rel="stylesheet" type="text/css" href="css/styleGame.css"/>
+        <script src="js/script.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet"> 
+    </head> 
+    <body >
+        <div id="wrap"> 
+            <div id="stageName">
+                <div class="threeFlex" style="justify-content: left;"><button  id="backButton" onclick="location.href = 'index.html'">&lt;</button></div>
+                <div class="threeFlex" style="font-size:20px" id="stageNameDiv">Stage 1</div>
+                <div class="threeFlex" id="info" style="font-size:20px">Draw!</div>
+            </div>
+            <div id="drawing">
+                <canvas id="drawCanvas">
+                </canvas>
+            </div>
+            <div id="controls">
+                <div class="threeFlex">
+                    <span id="numPoints">Points left: 1000</span>
+                </div>
+                <div class="threeFlex">
+                    <button id="drawButton" onclick="createCurveArray(arrayOfControlPoints);animateDrawCurve(arrayOfLinePoints);">Draw</button>
+                    <button onclick="reset()" id="resetButton">Reset</button>
+                    <button id="nextButton" onclick="next()">Next</button>
+                </div>
+                <div class="threeFlex">
+                    <span id="score" style="font-size: 32px;">Score: 0</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.onload = function(){
+            sequence = parseInt(localStorage.getItem("sequence"));
+            currentStage = parseInt(localStorage.getItem("stage"));
+            if(currentStage != 0){
+                document.getElementById("score").innerHTML = "Score: "+parseInt(localStorage.getItem("score"));
+            }
+            this.initalizeCanvas();
+            this.createStage();
+            }
+            window.onresize = function(){
+                this.onCanvasResize();
+            }
+        </script>
+    </body>
+    
+</html>
